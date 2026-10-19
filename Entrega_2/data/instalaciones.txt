@@ -1,0 +1,5 @@
+TENIS;Cancha de Tenis Principal
+TENIS;Cancha de Tenis Auxiliar
+PADEL;Cancha de Pádel Central
+MESA_TM;Mesa Tenis de Mesa Salón Cubierto;true
+MESA_TM;Mesa Tenis de Mesa Exterior;false

@@ -1,0 +1,6 @@
+CONJUNTO;Fútbol
+CONJUNTO;Baloncesto
+CONJUNTO;Voleibol
+INDIVIDUAL;Tenis;2
+INDIVIDUAL;Pádel;2
+INDIVIDUAL;Tenis de Mesa;2

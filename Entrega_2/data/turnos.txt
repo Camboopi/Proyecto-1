@@ -1,0 +1,2 @@
+Lunes;08:00-12:00;profe_juan,profe_marta,profe_andres,fisio_laura
+Martes;08:00-12:00;profe_juan,profe_marta,fisio_laura,fisio_camilo

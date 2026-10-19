@@ -1,0 +1,4 @@
+Halcones CDS;Fútbol;Sub-17;15
+Cóndores CDS;Fútbol;Sub-17;15
+Titanes Mayores CDS;Fútbol;Mayores;18
+Panteras CDS;Voleibol;Sub-17;12

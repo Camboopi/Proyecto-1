@@ -1,0 +1,4 @@
+BEBIDA;Café Americano;4500;true
+BEBIDA;Bebida Hidratante Fría;6000;false
+SNACK;Barra de Cereal con Maní;5000;Maní,Gluten
+SNACK;Croissant de Queso;4200;Gluten,Lácteos

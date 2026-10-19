@@ -1,0 +1,9 @@
+ADMIN;admin;admin123;Carlos Administrador
+ENTRENADOR;profe_juan;pass123;Juan Perez;DESC_JUAN
+ENTRENADOR;profe_marta;pass123;Marta Gomez;DESC_MARTA
+ENTRENADOR;profe_andres;pass123;Andres Castro;DESC_ANDRES
+FISIOTERAPEUTA;fisio_laura;pass123;Laura Rios;DESC_LAURA
+FISIOTERAPEUTA;fisio_camilo;pass123;Camilo Vega;DESC_CAMILO
+SOCIO;socio_mateo;pass123;Mateo Silva;16;Tenis:Avanzado:1200.0,Pádel:Intermedio:1100.0
+SOCIO;socio_valeria;pass123;Valeria Ortiz;16;Tenis:Intermedio:1150.0,Tenis de Mesa:Avanzado:1220.0
+SOCIO;socio_lucas;pass123;Lucas Diaz;16;Tenis:Principiante:1000.0,Tenis de Mesa:Principiante:1000.0
