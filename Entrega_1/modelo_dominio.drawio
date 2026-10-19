@@ -1,0 +1,157 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36">
+  <diagram id="cds-dominio-corregido" name="Modelo de Dominio CDS">
+    <mxGraphModel dx="3957" dy="1372" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#111827;" value="&lt;b&gt;Modelo de Dominio - Club Deportivo Séneca&lt;/b&gt;&lt;br&gt;&lt;i&gt;Entrega 1&lt;/i&gt;" vertex="1">
+          <mxGeometry height="40" width="700" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c_usuario" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;&amp;laquo;abstract&amp;raquo;&lt;br/&gt;Usuario&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- login: String&lt;br/&gt;- password: String&lt;br/&gt;- nombre: String&lt;br/&gt;- correo: String&lt;hr/&gt;+ autenticar(pass: String): boolean&lt;br/&gt;+ getLogin(): String" vertex="1">
+          <mxGeometry height="170" width="220" x="-50" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="c_deporte" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Deporte&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- nombre: String&lt;br/&gt;- minimoJugadores: int&lt;br/&gt;- permiteEmpates: boolean&lt;hr/&gt;+ getMinimoJugadores(): int&lt;br/&gt;&lt;i&gt;(Fútbol: 7, Baloncesto: 5, Voley: 6)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="140" width="230" x="610" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c_instalacion" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Instalacion&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- id: String&lt;br/&gt;- nombre: String&lt;br/&gt;- disciplina: String&lt;br/&gt;- capacidad: int&lt;br/&gt;- techada: boolean&lt;hr/&gt;+ prohibeBebidasCalientes(): bool" vertex="1">
+          <mxGeometry height="150" width="230" x="1080" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="c_socio" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Socio&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- edad: int&lt;br/&gt;- categoriaEdad: String&lt;br/&gt;- nivelIndividual: NivelHabilidad&lt;br/&gt;- puntosFidelidad: double&lt;br/&gt;- rankingELO: double&lt;hr/&gt;+ acumularPuntos(pts: double)&lt;br/&gt;+ redimirPuntos(pts: double): bool&lt;br/&gt;+ actualizarELO(nuevo: double)" vertex="1">
+          <mxGeometry height="190" width="220" x="-200" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="c_empleado" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;&amp;laquo;abstract&amp;raquo;&lt;br/&gt;Empleado&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- codigoDescuento: String&lt;hr/&gt;+ getDescuentoPropio(): 15%&lt;br/&gt;+ getDescuentoReferido(): 8%" vertex="1">
+          <mxGeometry height="130" width="200" x="80" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="c_admin" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#FEF2F2;strokeColor=#DC2626;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Administrador&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;&lt;i&gt;Restricciones de Rol:&lt;/i&gt;&lt;br/&gt;- puedeReservar(): false&lt;br/&gt;- puedeInscribirse(): false&lt;hr/&gt;+ aprobarTurnos(): boolean&lt;br/&gt;+ reabastecerTienda(): void" vertex="1">
+          <mxGeometry height="140" width="200" x="380" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="c_equipo" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Equipo&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- nombre: String&lt;br/&gt;- categoria: Sub-13/15/17/May&lt;br/&gt;- cupoMaximo: int&lt;br/&gt;- miembros: List&amp;lt;Inscripcion&amp;gt;&lt;hr/&gt;+ inscribirJugador(dorsalUnico)&lt;br/&gt;+ tieneDorsalDisponible(): bool" vertex="1">
+          <mxGeometry height="160" width="220" x="620" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="c_reserva" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Reserva&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- id: String&lt;br/&gt;- fecha: String&lt;br/&gt;- bloqueHorario: String&lt;br/&gt;- modalidad: Sencillos/Dobles&lt;br/&gt;- numJugadores: int&lt;hr/&gt;+ admiteBebidaCaliente(): bool" vertex="1">
+          <mxGeometry height="150" width="220" x="1085" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="c_entrenador" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Entrenador&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- especialidad: String&lt;hr/&gt;+ puedeJugarCualquierNivel(): true&lt;br/&gt;+ registrarEvaluacion(nota 1..5)" vertex="1">
+          <mxGeometry height="110" width="210" x="210" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="c_fisio" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Fisioterapeuta&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- tarjetaProfesional: String&lt;hr/&gt;+ solicitarCambioTurno()" vertex="1">
+          <mxGeometry height="110" width="190" x="220" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="c_partido_int" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;PartidoInterno&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- fecha: String&lt;br/&gt;- marcadorLocal: int&lt;br/&gt;- marcadorVisitante: int&lt;hr/&gt;+ puedeDisputarse(): bool&lt;br/&gt;  &lt;i&gt;(Valida quórum mínimo)&lt;/i&gt;&lt;br/&gt;+ aplicarSuspensionTarjetas()" vertex="1">
+          <mxGeometry height="160" width="220" x="490" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="c_partido_ind" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;PartidoIndividual&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- sets1: int, sets2: int&lt;br/&gt;- games1: int, games2: int&lt;br/&gt;- puntos1: int, puntos2: int&lt;hr/&gt;+ sonNivelesCompatibles(): bool&lt;br/&gt;  &lt;i&gt;(Igual/Adyacente o Coach)&lt;/i&gt;&lt;br/&gt;+ actualizarRankingELO()" vertex="1">
+          <mxGeometry height="160" width="230" x="1080" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="c_articulo" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;ArticuloTienda&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- id: String, - nombre: String&lt;br/&gt;- categoria: String&lt;br/&gt;- precioBase: double, - stock: int&lt;hr/&gt;+ aplicarIVA(): double (19%)&lt;br/&gt;+ descontarStock(cant: int)" vertex="1">
+          <mxGeometry height="150" width="230" x="-590" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="c_item_cafe" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;ItemCafeteria&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- nombre: String&lt;br/&gt;- tipo: Fría, Caliente, Snack&lt;br/&gt;- precioBase: double&lt;br/&gt;- alergenos: List&amp;lt;String&amp;gt;&lt;hr/&gt;+ esBebidaCaliente(): bool&lt;br/&gt;+ aplicarImpoconsumo(): 8%" vertex="1">
+          <mxGeometry height="170" width="230" x="-590" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="c_venta" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Venta&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- rubro: Tienda / Cafetería&lt;br/&gt;- descuento (15% emp, 8% ref)&lt;br/&gt;- propina sugerida (10%)&lt;br/&gt;- puntosFidelidad (2% generado)&lt;hr/&gt;+ liquidar()&lt;br/&gt;+ redimirPuntos()" vertex="1">
+          <mxGeometry height="160" width="230" x="-420" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="c_turno" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;TurnoSemanal&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- dia: String, - bloque: String&lt;br/&gt;- empleado: Empleado&lt;hr/&gt;&lt;b&gt;Regla de Disponibilidad:&lt;/b&gt;&lt;br/&gt;Mín. 2 Entrenadores + 1 Fisio" vertex="1">
+          <mxGeometry height="140" width="210" x="-140" y="625" as="geometry" />
+        </mxCell>
+        <mxCell id="c_competencia" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;&amp;laquo;abstract&amp;raquo;&lt;br/&gt;Competencia&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;- nombre: String (Cerros / ASCUN)&lt;br/&gt;- nominaOficial: List&amp;lt;Socio&amp;gt;&lt;hr/&gt;+ registrarPartidoOficial()&lt;br/&gt;&lt;i&gt;(Puntos Cerros: 3 victoria, 1 empate)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="140" width="230" x="750" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_u_s" edge="1" parent="1" source="c_socio" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=12;strokeColor=#2563EB;strokeWidth=1.5;" target="c_usuario">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-59.96000000000001" y="365.03999999999996" />
+              <mxPoint x="60.04000000000002" y="365.03999999999996" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_u_e" edge="1" parent="1" source="c_empleado" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=12;strokeColor=#2563EB;strokeWidth=1.5;" target="c_usuario">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180.04000000000002" y="365.03999999999996" />
+              <mxPoint x="60.04000000000002" y="365.03999999999996" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_u_a" edge="1" parent="1" source="c_admin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=12;strokeColor=#2563EB;strokeWidth=1.5;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="c_usuario">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="365" />
+              <mxPoint x="60" y="365" />
+            </Array>
+            <mxPoint x="359.95" y="365.027027027027" as="sourcePoint" />
+            <mxPoint x="40.004054054053725" y="305" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_e_ent" edge="1" parent="1" source="c_entrenador" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=12;strokeColor=#2563EB;strokeWidth=1.5;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="c_empleado">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="824.96" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_e_fis" edge="1" parent="1" source="c_fisio" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=12;strokeColor=#2563EB;strokeWidth=1.5;" target="c_empleado">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="325" y="560" />
+              <mxPoint x="180.04000000000002" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_eq_dep" edge="1" parent="1" source="c_equipo" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;endSize=10;strokeColor=#D97706;strokeWidth=1.5;" target="c_deporte">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="250" />
+              <mxPoint x="720" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_pi_eq" edge="1" parent="1" source="c_partido_int" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;endSize=10;strokeColor=#D97706;strokeWidth=1.5;" target="c_equipo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_res_inst" edge="1" parent="1" source="c_reserva" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;endSize=10;strokeColor=#7C3AED;strokeWidth=1.5;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="c_instalacion">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1195" y="290" />
+              <mxPoint x="1195" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_pind_res" edge="1" parent="1" source="c_partido_ind" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;endSize=10;strokeColor=#7C3AED;strokeWidth=1.5;" target="c_reserva">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f-De3TBcEdOqxqgyqYmC-2" edge="1" parent="1" source="c_item_cafe" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;endSize=10;strokeColor=#D97706;strokeWidth=1.5;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="c_venta">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-305.43" y="400" as="sourcePoint" />
+            <mxPoint x="-305.43" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-De3TBcEdOqxqgyqYmC-3" edge="1" parent="1" source="c_articulo" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;endSize=10;strokeColor=#D97706;strokeWidth=1.5;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-360" y="695" as="sourcePoint" />
+            <mxPoint x="-305" y="305" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-De3TBcEdOqxqgyqYmC-4" edge="1" parent="1" source="c_venta" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;endSize=10;strokeColor=light-dark(#006EAF,#699EFF);strokeWidth=1.5;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fillColor=#1ba1e2;" target="c_usuario">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-200" y="570" as="sourcePoint" />
+            <mxPoint x="-145" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-De3TBcEdOqxqgyqYmC-6" edge="1" parent="1" source="c_turno" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;endSize=10;strokeColor=light-dark(#D97706,#9DA6B2);strokeWidth=1.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="570" as="sourcePoint" />
+            <mxPoint x="140" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-De3TBcEdOqxqgyqYmC-7" edge="1" parent="1" source="c_competencia" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;endSize=10;strokeColor=#D97706;strokeWidth=1.5;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="c_equipo">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="730" y="660" as="sourcePoint" />
+            <mxPoint x="860" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
